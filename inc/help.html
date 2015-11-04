@@ -1,0 +1,30 @@
+<h1>Ninja Forms Data Redirect</h1>
+		<h3>For сorrect configuation of sending data from Ninja forms to API responder.co.il you need to follow these requirements:</h3>
+		<ol>
+			<li>Enter to the page <b>Ninja Forms Data Redirect -> Forms Settings</b> and choose <b>API settings</b></li>
+			<p>On this page, you must set API url, example "https://cp.responder.co.il/subscribe.php".</p>
+			<p>Also you can enable Debug mode, what can help you to check the form. <b>Attention!</b> When Debug mode is turned on, we call method wp_die() to get information.</p>
+			<li>Go to the page <b>Ninja Forms Data Redirect -> Forms Settings</b> and select tab <b>Ninja forms</b></li>
+			<p>On this page we need to connect the form to API. Click to the button "+" and you will create new connection. You need to enter these fields in parametres:</p>
+			<ul>
+				<li><b>Ninja form ID</b> - this is  ID of Ninja form </li>
+				<li><b>ID API</b> - this is  ID of connected form in   responder.co.il </li>
+				<li><b>Link Thank you</b> - this is address where you are redirected after successful submission of the form</li>
+			</ul>
+			<li> Go to editing of Ninja form which you need</li>
+			<p>For connection with API you need these fields:</p>
+			<ul>
+				<li><b>subscribers_name</b></li>
+				<li><b>subscribers_email</b></li>
+				<li><b>subscribers_phone</b></li>
+			</ul>
+			<p>Plugin need to get this fields from Ninja forms you need to configure form:</p>
+			<ul>
+				<li>Open configuration of field for example <b>"First name"</b></li>
+				<li>Open -  <b>"Advenced Settings"</b>  of this field</li>
+				<li>Put to -  <b>"Admin Label"</b>,  for  <b>"First name"</b> it would be <b>"subscribers_name"</b>)</li>
+				<li>Put to -  <b>"Custom CSS Classes"</b>,you need to put same thing as about but you need it for validation of form (for <b>"First name"</b> it would be <b>"subscribers_name"</b>)</li>
+				<li>if you want to make this field required in <b>"Custom CSS Classes"</b> you should add <b>"required"</b>,  so this field <b>"Custom CSS Classes"</b> for <b>"First name"</b> would look like: "<b>subscribers_name required</b>". You need put SPACE between it. </li>
+			</ul>
+		</ol>
+		<p><b>Congratulations!</b>  You have configured the plugin. <p> 
